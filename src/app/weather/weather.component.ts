@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms'
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-weather',
@@ -9,17 +10,22 @@ import { FormBuilder, FormGroup } from '@angular/forms'
 export class WeatherComponent implements OnInit {
 
   public weatherLocation: FormGroup;
+  weatherData;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(
+    private formBuilder: FormBuilder,
+    private apiService: ApiService
+  ) { }
 
   ngOnInit() {
     this.weatherLocation = this.formBuilder.group({
-      location : ''
+      location: ''
     })
   }
 
   getDataFromApi(formData) {
-    console.log(formData)
+    this.apiService.getWeather(formData.location).subscribe(data => this.weatherData = data)
+    console.log(this.weatherData)
   }
 
 }
