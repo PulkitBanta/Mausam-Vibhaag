@@ -8,6 +8,8 @@
 }
 
 .display {
+    min-width: 300px;
+    min-height: 200px;
     color: white;
     width: 40vw;
     height: 40vh;
@@ -22,6 +24,7 @@
 
 .display>p {
     text-align: center;
+    margin: 0.2em;
 }
 
 .item1 {
@@ -38,4 +41,9 @@
 
 .item3 {
     font-size: 2em;
+}
+
+.image {
+    height: 1em;
+    width: 1em;
 }
