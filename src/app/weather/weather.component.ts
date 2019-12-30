@@ -11,6 +11,7 @@ export class WeatherComponent implements OnInit {
 
   public weatherLocation: FormGroup;
   weatherData;
+  intial;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -21,11 +22,18 @@ export class WeatherComponent implements OnInit {
     this.weatherLocation = this.formBuilder.group({
       location: ''
     })
+
+    // inital location is set to delhi
+    this.apiService.getWeather("Delhi").subscribe(data => this.weatherData = data)
   }
 
   getDataFromApi(formData) {
     this.apiService.getWeather(formData.location).subscribe(data => this.weatherData = data)
     console.log(this.weatherData)
+    if(this.weatherData.request === undefined )
+    {
+      window.alert("Enter a correct location");
+    }
   }
 
 }

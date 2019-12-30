@@ -1,10 +1,41 @@
-.vertical-center {
-    vertical-align: middle;
-    margin: 29.15vh auto;
-    color: white;
-    font-size: 3rem;
-}
-
 .align {
     margin-top: 20vh;
+}
+
+.full-screen {
+    height: 80vh;
+    width: 100vw;
+}
+
+.display {
+    color: white;
+    width: 40vw;
+    height: 40vh;
+    background-color: #164058;
+    margin: 5vh auto 0 auto;
+    border: 5px solid rgb(255, 255, 255, 0.25);
+    border-radius: 3%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 2em;
+}
+
+.display>p {
+    text-align: center;
+}
+
+.item1 {
+    font-weight: bolder;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.item2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-size: 2em;
+}
+
+.item3 {
+    font-size: 2em;
 }

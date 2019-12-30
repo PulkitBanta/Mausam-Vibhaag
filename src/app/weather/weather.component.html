@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container full-screen">
     <div class="align">
         <form (ngSubmit)="getDataFromApi(weatherLocation.value)" [formGroup]="weatherLocation">
             <div class="form-group">
@@ -10,9 +10,12 @@
         </form>
     </div>
 
-    <div class="vertical-center">
-        <p class="text-center">
-            {{this.weatherData?.current.temperature}} &#176; C
-        </p>
+    <div class="display">
+        <p class="item1">{{ this.weatherData?.request.query }}</p>
+        <p class="item2">{{this.weatherData?.current.weather_descriptions[0]}}</p>
+        <p class="item3">{{ this.weatherData?.current.temperature }} &#176; C</p>
+        <p>Wind: {{ this.weatherData?.current.wind_speed }} kmph</p>
+        <p>Precip: {{ this.weatherData?.current.precip }} mm</p>
+        <p>Pressure: {{ this.weatherData?.current.pressure }} mb</p>
     </div>
 </div>
