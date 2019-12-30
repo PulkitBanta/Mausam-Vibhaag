@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+    /* You can add global styles to this file, and also import other style files */
+    
+    body {
+        background-image: url(./assets/mountains.svg), linear-gradient(135deg, #1f4e69 0, #164058 100%);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 0;
+        /* height: 100vh;
+    width: 100vw; */
+    }

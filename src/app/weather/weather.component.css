@@ -1,0 +1,10 @@
+.vertical-center {
+    vertical-align: middle;
+    margin: 29.15vh auto;
+    color: white;
+    font-size: 3rem;
+}
+
+.align {
+    margin-top: 20vh;
+}
