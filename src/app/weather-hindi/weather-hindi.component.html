@@ -2,10 +2,10 @@
     <div class="align">
         <form (ngSubmit)="getDataFromApi(weatherLocation.value)" [formGroup]="weatherLocation">
             <div class="form-group">
-                <input class="form-control" id="location" type="text" placeholder="Please input a Location" formControlName='location'>
+                <input class="form-control" id="location" type="text" placeholder="कृपया मौसम खोज के लिए एक स्थान इनपुट करें ...." formControlName='location'>
             </div>
             <div class="text-center">
-                <button type="submit" class="btn btn-success btn-md">Search for the weather</button>
+                <button type="submit" class="btn btn-success btn-md">मौसम की खोज करें</button>
             </div>
         </form>
     </div>

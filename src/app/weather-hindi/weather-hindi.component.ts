@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ApiService } from '../api.service';
+import { HindiWeatherService } from '../hindi-weather.service';
 
 @Component({
   selector: 'app-weather-hindi',
@@ -12,10 +13,12 @@ export class WeatherHindiComponent implements OnInit {
   public weatherLocation: FormGroup;
   weatherData;
   intial;
+  hindiWeatherData;
 
   constructor(
     private formBuilder: FormBuilder,
-    private apiService: ApiService
+    private apiService: ApiService,
+    private hindiWeatherService: HindiWeatherService
   ) { }
 
   ngOnInit() {
@@ -27,13 +30,11 @@ export class WeatherHindiComponent implements OnInit {
     this.apiService.getWeather("Delhi").subscribe(data => this.weatherData = data)
   }
 
+  
+
   getDataFromApi(formData) {
     this.apiService.getWeather(formData.location).subscribe(data => this.weatherData = data)
     console.log(this.weatherData)
-    if(this.weatherData.request === undefined )
-    {
-      window.alert("Enter a correct location");
-    }
   }
 
 }

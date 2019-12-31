@@ -30,10 +30,6 @@ export class WeatherComponent implements OnInit {
   getDataFromApi(formData) {
     this.apiService.getWeather(formData.location).subscribe(data => this.weatherData = data)
     console.log(this.weatherData)
-    if(this.weatherData.request === undefined )
-    {
-      window.alert("Enter a correct location");
-    }
   }
 
 }
