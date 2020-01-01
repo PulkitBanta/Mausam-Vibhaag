@@ -28,15 +28,24 @@ export class WeatherHindiComponent implements OnInit {
 
     // inital location is set to delhi
     this.apiService.getWeather("Delhi").subscribe(data => this.weatherData = data)
+    this.hindiWeatherService.toHindi('Delhi').subscribe(data => this.hindiWeatherData = data)
+    console.log(this.hindiWeatherData)
+    console.log(this.weatherData)
 
     //checking hindi api
-    this.hindiWeatherData = this.hindiWeatherService.getHindiWeather('Delhi')
-    console.log(this.hindiWeatherData)
+    // this.hindiWeatherData = this.hindiWeatherService.toHindi('Delhi')
+    // console.log(this.hindiWeatherData)
   }
 
   getDataFromApi(formData) {
     this.apiService.getWeather(formData.location).subscribe(data => this.weatherData = data)
+    this.hindiWeatherService.toHindi('Delhi').subscribe(data => this.hindiWeatherData = data)
     console.log(this.weatherData)
+    console.log(this.hindiWeatherData)
+  }
+
+  allHindi() {
+
   }
 
 }
