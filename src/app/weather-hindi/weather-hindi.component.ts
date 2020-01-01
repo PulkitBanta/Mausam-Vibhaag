@@ -13,8 +13,8 @@ export class WeatherHindiComponent implements OnInit {
   public weatherLocation: FormGroup;
   weatherData;
   intial;
-  hindiLocation ;
-  hindiDesciption;
+  hindiLocation: any ;
+  hindiDesciption: any;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -50,6 +50,8 @@ export class WeatherHindiComponent implements OnInit {
     console.log(this.weatherData)
     this.hindiWeatherService.toHindi(this.weatherData.request.query).subscribe(data => this.hindiLocation = data)
     console.log(this.hindiLocation)
+    // this.hindiWeatherService.toHindi(this.weatherData.current.weather_descriptions[0]).subscribe(data => this.hindiDesciption = data)
+    // console.log(this.hindiDesciption)
   }
 
   // allHindi(data) {
