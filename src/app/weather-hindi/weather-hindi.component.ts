@@ -13,7 +13,8 @@ export class WeatherHindiComponent implements OnInit {
   public weatherLocation: FormGroup;
   weatherData;
   intial;
-  hindiWeatherData;
+  hindiLocation ;
+  hindiDesciption;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -22,30 +23,38 @@ export class WeatherHindiComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+
     this.weatherLocation = this.formBuilder.group({
       location: ''
     })
 
-    // inital location is set to delhi
-    this.apiService.getWeather("Delhi").subscribe(data => this.weatherData = data)
-    this.hindiWeatherService.toHindi('Delhi').subscribe(data => this.hindiWeatherData = data)
-    console.log(this.hindiWeatherData)
-    console.log(this.weatherData)
+    // inital location is set to delhi to get data from api
+    this.apiService.getWeather("Delhi")
+    .subscribe(data => {
+      this.weatherData = data;
+      console.log(this.weatherData)
+    })
 
-    //checking hindi api
-    // this.hindiWeatherData = this.hindiWeatherService.toHindi('Delhi')
-    // console.log(this.hindiWeatherData)
+    // converting data from english to hindi
+    this.hindiWeatherService.toHindi('Delhi, India').
+    subscribe(data => {
+      this.hindiLocation = data;
+      console.log(this.hindiLocation)
+    })
+    
+    
   }
 
   getDataFromApi(formData) {
     this.apiService.getWeather(formData.location).subscribe(data => this.weatherData = data)
-    this.hindiWeatherService.toHindi('Delhi').subscribe(data => this.hindiWeatherData = data)
     console.log(this.weatherData)
-    console.log(this.hindiWeatherData)
+    this.hindiWeatherService.toHindi(this.weatherData.request.query).subscribe(data => this.hindiLocation = data)
+    console.log(this.hindiLocation)
   }
 
-  allHindi() {
-
-  }
+  // allHindi(data) {
+  //   this.hindiWeatherService.toHindi(data).subscribe(data => this.hindiLocation = data)
+  //   console.log(this.hindiLocation)
+  // }
 
 }
