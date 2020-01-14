@@ -8,8 +8,12 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  getWeather(location) {
-    return this.http.get("http://api.weatherstack.com/current?access_key=fbcd8f910f691644f025d8065bb6a5ab&query=" + location)
+  getWeather(location, country) {
+    return this.http.get("http://api.openweathermap.org/data/2.5/forecast?q="+ location +"," + country + "&appid=337d351936e39e0032a988f267614961");
+  }
+
+  getHindiWeather(location, country) {
+    return this.http.get("http://api.openweathermap.org/data/2.5/forecast?q="+ location +"," + country + "&appid=337d351936e39e0032a988f267614961&lang=hi");
   }
 
 }

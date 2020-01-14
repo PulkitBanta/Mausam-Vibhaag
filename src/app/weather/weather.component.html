@@ -4,6 +4,9 @@
             <div class="form-group">
                 <input class="form-control" id="location" type="text" placeholder="Please input a Location for weather search ..." formControlName='location'>
             </div>
+            <div class="form-group">
+                <input class="form-control" id="location" type="text" placeholder="Enter country's name" formControlName='location'>
+            </div>
             <div class="text-center">
                 <button type="submit" class="btn btn-success btn-md">Search for the weather</button>
             </div>
@@ -11,11 +14,11 @@
     </div>
 
     <div class="display">
-        <p class="item1"><img class="image" src="../../assets/location.svg"> &nbsp;{{ this.weatherData?.request.query }}</p>
-        <p class="item2">{{ this.weatherData?.current.weather_descriptions[0] }}</p>
-        <p class="item3"><img class="image" src="../../assets/temprature.svg"> &nbsp;{{ this.weatherData?.current.temperature }} &#176; C</p>
-        <p><img class="image" src="../../assets/wind.svg"> &nbsp;Wind: {{ this.weatherData?.current.wind_speed }} kmph</p>
-        <p><img class="image" src="../../assets/precip.svg"> &nbsp;Precip: {{ this.weatherData?.current.precip }} mm</p>
-        <p><img class="image" src="../../assets/pressure.svg"> &nbsp;Pressure: {{ this.weatherData?.current.pressure }} mb</p>
+        <p class="item1"><img class="image" src="../../assets/location.svg"> &nbsp;{{ this.weatherData?.city.name }}</p>
+        <p class="item2">{{ this.weatherData?.list[0].weather[0].description }}</p>
+        <p class="item3"><img class="image" src="../../assets/temprature.svg"> &nbsp;{{ this.reduce(this.weatherData?.list[0].main.temp - 273.15) }} &#176; C</p>
+        <p><img class="image" src="../../assets/wind.svg"> &nbsp;Wind: {{ this.weatherData?.list[0].wind.speed }} kmph</p>
+        <p><img class="image" src="../../assets/precip.svg"> &nbsp;Hundity: {{ this.weatherData?.list[0].main.humidity }} %</p>
+        <p><img class="image" src="../../assets/pressure.svg"> &nbsp;Pressure: {{ this.weatherData?.list[0].main.pressure }} mb</p>
     </div>
 </div>
