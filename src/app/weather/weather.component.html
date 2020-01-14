@@ -1,13 +1,13 @@
 <div class="container full-screen">
     <div class="align">
-        <form (ngSubmit)="getDataFromApi(weatherLocation.value)" [formGroup]="weatherLocation">
+        <form class="input-grid" (ngSubmit)="getDataFromApi(weatherLocation.value)" [formGroup]="weatherLocation">
             <div class="form-group">
                 <input class="form-control" id="location" type="text" placeholder="Please input a Location for weather search ..." formControlName='location'>
             </div>
             <div class="form-group">
                 <input class="form-control" id="location" type="text" placeholder="Enter country's name" formControlName='location'>
             </div>
-            <div class="text-center">
+            <div class="submit-button">
                 <button type="submit" class="btn btn-success btn-md">Search for the weather</button>
             </div>
         </form>
@@ -18,7 +18,7 @@
         <p class="item2">{{ this.weatherData?.list[0].weather[0].description }}</p>
         <p class="item3"><img class="image" src="../../assets/temprature.svg"> &nbsp;{{ this.reduce(this.weatherData?.list[0].main.temp - 273.15) }} &#176; C</p>
         <p><img class="image" src="../../assets/wind.svg"> &nbsp;Wind: {{ this.weatherData?.list[0].wind.speed }} kmph</p>
-        <p><img class="image" src="../../assets/precip.svg"> &nbsp;Hundity: {{ this.weatherData?.list[0].main.humidity }} %</p>
+        <p><img class="image" src="../../assets/precip.svg"> &nbsp;Humidity: {{ this.weatherData?.list[0].main.humidity }} %</p>
         <p><img class="image" src="../../assets/pressure.svg"> &nbsp;Pressure: {{ this.weatherData?.list[0].main.pressure }} mb</p>
     </div>
 </div>

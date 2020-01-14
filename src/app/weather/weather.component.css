@@ -8,6 +8,18 @@
     width: 100vw;
 }
 
+.input-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 1em;
+}
+
+.submit-button {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+}
+
 .display {
     min-width: 550px;
     min-height: 300px;

@@ -1,13 +1,13 @@
 <div class="container full-screen">
     <div class="align">
-        <form (ngSubmit)="getDataFromApi(weatherLocation.value)" [formGroup]="weatherLocation">
+        <form class="input-grid" (ngSubmit)="getDataFromApi(weatherLocation.value)" [formGroup]="weatherLocation">
             <div class="form-group">
                 <input class="form-control" id="location" type="text" placeholder="कृपया मौसम की खोज के लिए एक जगह का नाम डालें ...." formControlName='location'>
             </div>
             <div class="form-group">
                 <input class="form-control" id="country" type="text" placeholder="देश का नाम डालें ...." formControlName='country'>
             </div>
-            <div class="text-center">
+            <div class="submit-button">
                 <button type="submit" class="btn btn-success btn-md">मौसम की खोज करें</button>
             </div>
         </form>
