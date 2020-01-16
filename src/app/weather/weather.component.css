@@ -11,6 +11,7 @@
 .input-grid {
     display: grid;
     grid-template-columns: auto auto;
+    grid-column-gap: 1vw;
     margin: 1em;
 }
 
