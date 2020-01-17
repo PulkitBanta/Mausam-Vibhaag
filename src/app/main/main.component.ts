@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
+  expression: boolean = false;
+  expression1: boolean = false;
   constructor() { }
 
   ngOnInit() {
   }
+
+ 
 
 }

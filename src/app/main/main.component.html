@@ -1,17 +1,27 @@
-<div class="full-screen">
-    <div class="center">
-        <p id="lang">Please Select a language / कृपया भाषा चुनें</p>
-        <a routerLink="En">
-            <div class="dimensions">
-                <p class="lang-main">A B C D</p>
-                <p class="lang-name">English</p>
-            </div>
+<div class="main">
+    <div class="hindi" (mouseenter)="expression=true" [ngClass]="{'expand':expression, 'shrink':expression1}"
+    (mouseleave)="expression=false">
+    <div class="background">
+
+    </div>
+        <div class="sun"   [ngClass]="{'disp':expression}" >
+
+        </div>
+        <a class="lang" routerLink="Hindi">
+            हिन्दी
         </a>
-        <a routerLink="Hindi">
-            <div class="dimensions">
-                <p class="lang-main">क ख ग</p>
-                <p class="lang-name">हिंदी</p>
-            </div>
+
+    </div>
+    <div class="english" (mouseenter)="expression1=true" [ngClass]="{'expand1':expression1, 'shrink':expression}"
+    (mouseleave)="expression1=false">
+    <div class="background">
+
+    </div>
+        <div class="moon" [ngClass]="{'disp':expression1}">
+
+        </div>
+        <a class="lang" routerLink="En">
+            English
         </a>
     </div>
 </div>
