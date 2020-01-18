@@ -20,10 +20,10 @@ body{
     background-attachment: fixed;
     height: 100vh;
     width: 50%;
-    transition: ease-in-out 0.5s;
+    transition: width ease-in-out 0.5s;
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: flex-end;
     overflow:hidden;
 }
 
@@ -34,10 +34,10 @@ body{
     background-attachment: fixed;
     height: 100vh;
     width: 50%;
-    transition: ease-in-out 0.5s;
+    transition: width ease-in-out 0.5s;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
     overflow:hidden;
 }
 
@@ -104,7 +104,7 @@ a {
 .sun{
     position: absolute;
     opacity: 0;
-    top:10%;
+    top:30%;
     left:10%;
     border-radius: 50%;
     height: 50px;
@@ -113,12 +113,12 @@ a {
     
     box-shadow: 0px 0px 40px 15px white;  
     
-    transition: opacity ease-in-out 0.5s;
+    transition: all ease-in-out 0.3s;
 }
 .moon{
     position: absolute;
     opacity: 0;
-    top:10%;
+    top:30%;
     right:10%;
     border-radius: 90%;
     height: 50px;
@@ -127,10 +127,10 @@ a {
    
     box-shadow: 10px 5px 0px 0px white;  
     
-    transition: opacity ease-in-out 0.5s;
+    transition: all ease-in-out 0.3s;
 }
 .disp{           
-    
+    top:10%;
     opacity: 1;
     
 }
@@ -142,3 +142,91 @@ a {
    background-size:cover;;
    background-attachment: fixed;
 }
+
+.cloud1:before,.cloud2:before{
+    content: "";
+    display: block;
+    width: 25px;
+    height: 25px;
+    top: -10px;
+    left: 12.5px;
+    background-color: white;   
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 20px -5px 0 10px white, 20px -5px 0 5px white, 45px -2.5px 0 5px white;
+  }
+  .cloud1,.cloud2{
+    width: 100px;
+    height: 25px;
+    background-color: white;   
+    border-radius: 15px;
+     margin-left:1vw;
+      
+  }
+  .cloud2{
+      width: 200px;
+    height: 50px;
+    background-color: #fff;   
+    border-radius: 30px;
+  }
+  .cloud2:before{
+      width: 50px;
+    height: 50px;
+    top: -20px;
+    left: 25px;
+    border-radius: 30px;
+    background-color: #fff; 
+    box-shadow: 40px -10px 0 20px #fff, 80px -10px 0 10px #fff, 115px -5px 0 -10px #fff;
+  }
+  
+  .clouds
+  {
+      position: absolute;
+      top:10%;
+      left:20%;
+      display:flex;
+      opacity: 0;
+      width:30vw;
+      flex-direction:row;
+      justify-content: space-between;
+      
+		transition-duration: 0.2s;
+  }
+  .cDisp{
+      opacity: 0.9 !important;
+      /* transition: all 0s; */
+      transition:opacity ease-in 0.5s;
+      
+  }
+  .stars{
+      position: absolute;
+      display: block;
+      right:20vw;
+      height:27vh;
+      width:40vw;
+      top:0;
+      opacity: 0;
+      transition-duration: 0.2s;
+  }
+  #midground {
+      background: url(midground.png) repeat 20% 20%;
+      background-size: cover;
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      height:inherit;
+      width: inherit;
+      z-index: 997;
+  }
+  #foreground {
+      background: url(foreground.png) repeat 20% 110%;
+      background-size: cover;
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      height: inherit;
+      width:inherit;
+      z-index: 998;
+  }
+  /* .hide{
+      display: none;
+      opacity:0;
+  } */
