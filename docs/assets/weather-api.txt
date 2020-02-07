@@ -1,0 +1,9 @@
+fbcd8f910f691644f025d8065bb6a5ab -- Api Key
+
+Base URL: API requests start out with the following base URL:
+http://api.weatherstack.com/
+
+-- Current weather Api Endpoint
+http://api.weatherstack.com/current
+    ? access_key = YOUR_ACCESS_KEY
+    & query = New York
