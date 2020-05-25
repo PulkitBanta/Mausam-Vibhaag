@@ -7,6 +7,8 @@
 - The app is used to provide the current weather details of a localtion.
 - You can see the weather details either in English or Hindi
 
+- Check the app live at [Mausam Vibhaag](https://mausamvibhaag.netlify.app)
+
 # Installing
 
 Clone the repo - (https://github.com/PulkitBanta/Mausam-Vibhaag)
