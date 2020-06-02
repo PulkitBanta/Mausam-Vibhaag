@@ -1,27 +1,45 @@
 # Mausam Vibhaag (मौसम विभाग)
-सबसे अच्छा मौसम पूर्वानुमान प्राप्त करें |
-*En: Get the most accurate weather.*
+सबसे अच्छा मौसम पूर्वानुमान प्राप्त करें
+
+*En: Get the most accurate weather*
+
+A weather application that provides precise weather according to the location given by the user.
+The weather can be displayed either in English or Hindi.
 
 ## Getting Started
 
-- The app is used to provide the current weather details of a localtion.
-- You can see the weather details either in English or Hindi
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-- Check the app live at [Mausam Vibhaag](https://mausamvibhaag.netlify.app)
-
-# Installing
-
-Clone the repo - (https://github.com/PulkitBanta/Mausam-Vibhaag)
-
-### Install Angular
+You'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/)
 
 ```
-$ npm install -g @angular/cli
+node@v10.16.0 or higher
+npm@6.9.0 or higher
+git@2.17.1 or higher
 ```
 
-### Serve on Local Machine
+## How To Use
+
+From your command line, clone and run Mausam-Vibhaag:
+
+```bash
+# Clone this repository
+$ git clone https://github.com/PulkitBanta/Mausam-Vibhaag.git
+
+
+# Go into the repository
+$ cd Mausam-Vibhaag
+
+# Install dependencies
+$ npm install
 ```
-$ ng serve -o
+
+### Getting your API key
+Get API key from [OpenWeather](https://openweathermap.org/current) and replace `"Your API KEY"` in the `api.service.ts` with the api_key recieved from [OpenWeather](https://openweathermap.org/current).
+
+```bash
+#Start's development server
+$ npm start
 ```
 
 ## Screenshots
@@ -33,7 +51,6 @@ $ ng serve -o
 ## Built With
 
 * [Angular](https://angular.io/) - The web framework used for development of Front end applications.
-* [REST API - OpenWeather](https://openweathermap.org/) - Get current weather, daily forecast for 16 days, and 3-hourly forecast 5 days for your city.
 
 ## Authors
 
