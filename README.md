@@ -52,8 +52,9 @@ $ npm start
 
 * [Angular](https://angular.io/) - The web framework used for development of Front end applications.
 
-## Authors
+## Contributors
 
-* **Pulkit Banta** - *Initial work*, *Designing*, *Code* - [PulkitBanta](https://github.com/PulkitBanta/)
-* **Nischey Badyal** - *Designing* - [NB134](https://github.com/NB134)
+| [![Pulkit Banta](https://github.com/PulkitBanta.png?size=100)](https://github.com/PulkitBanta) | [![Nischey Badyal](https://github.com/NB134.png?size=100)](https://github.com/NB134) |
+| --- | --- |
+| [Pulkit Banta](https://github.com/PulkitBanta) | [Nischey Badyal](https://github.com/NB134) |
 
