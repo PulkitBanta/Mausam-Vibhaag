@@ -61,3 +61,17 @@
     height: 1em;
     width: 1em;
 }
+
+@media screen and (max-width: 580px) {
+    .display {
+        width: auto;
+        height: auto;
+        min-width: fit-content;
+        min-height: fit-content;
+        grid-template-columns: auto !important;
+    }
+
+    .align {
+        margin-top: 10vh;
+    }
+}
