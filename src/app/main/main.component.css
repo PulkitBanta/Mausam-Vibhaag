@@ -65,14 +65,14 @@ a {
 
 .hindi>a {
     border-right: 0;
-    border-color: rgb(13, 1, 41);
-    color: rgb(13, 1, 41);
+    border-color: rgb(254, 255, 212);
+    color: rgb(254, 255, 212);
 }
 
 .english>a {
     border-left: 0;
-    border-color: rgb(254, 255, 212);
-    color: rgb(254, 255, 212);
+    border-color: rgb(13, 1, 41);
+    color: rgb(13, 1, 41);
 }
 
 .hindi>.lang:hover,
