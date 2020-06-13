@@ -1,5 +1,6 @@
 .main {
     display: flex;
+    flex-direction: row;
     width: 100%;
     height: 100vh;
 }
@@ -83,7 +84,7 @@ a {
 
 .english>.lang:hover,
 .lang:focus {
-    box-shadow: inset -6.5em 0 0 0 rgb(0, 238, 255);
+    box-shadow: inset -7.5em 0 0 0 rgb(0, 238, 255);
     border-color: rgb(13, 1, 41);
     color: rgb(13, 1, 41);
 }
@@ -121,7 +122,7 @@ a {
 
 .background {
     position: absolute;
-    width: 100%;
+    height: 100%;
     width: inherit;
     background-image: url(../../assets/mountains.svg);
     background-size: cover;
@@ -194,37 +195,23 @@ a {
     height: 27vh;
     width: 40vw;
     top: 0;
-    opacity: 0;
     transition-duration: 0.2s;
 }
 
-#midground {
-    background: url(../../assets/midground.png) repeat 20% 20%;
-    background-size: cover;
+.star {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: inherit;
-    width: inherit;
-    z-index: 997;
+    opacity: 0;
+    top: 30%;
+    left: 10%;
+    border-radius: 50%;
+    height: 50px;
+    background: white;
+    width: 50px;
+    box-shadow: 0px 0px 40px 15px white;
+    transition: all ease-in-out 0.3s;
 }
 
-#foreground {
-    background: url(../../assets/foreground.png) repeat 20% 110%;
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: inherit;
-    width: inherit;
-    z-index: 998;
-}
-
-@media screen and (min-width: 480px) and (max-width: 1300px) {
+@media screen and (max-width: 1300px) {
     .hindi, .english {
         width: 100vw;
         justify-content: center;
@@ -233,9 +220,41 @@ a {
         flex-direction: column;
     }
     .hindi>a {
-        border-right: 2px;
+        border: 2px solid rgb(13, 1, 41);
+        color: rgb(13, 1, 41);
     }
     .english>a {
-        border-left: 2px;
+        border: 2px solid rgb(254, 255, 212);
+        color: rgb(254, 255, 212);
+    }
+    .expand1>a {
+        transform: scale(1.3);
+    }
+    .moon {
+        top: auto;
+        right: 5%;
+        bottom: 20%;
+    }
+    .stars {
+        top: auto;
+        bottom: 5%;
+        left: 0%;
+    }
+    .sun {
+        left: 5%;
+    }
+    .clouds {
+        top: 10%;
+        left: auto;
+    }
+    .cloud1, .cloud2 {
+        margin: 0 4em;
+    }
+    .background {
+        width: 100%;
+        height: auto;
+    }
+    a {
+        font-size: 5vh;
     }
 }

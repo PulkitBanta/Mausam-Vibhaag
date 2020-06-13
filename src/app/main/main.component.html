@@ -1,20 +1,19 @@
 <div class="main">
     <div class="hindi" (mouseenter)="expression=true" [ngClass]="{'expand':expression, 'shrink':expression1}" (mouseleave)="expression=false">
+        <div class="background"></div>
         <div class="clouds" [ngClass]="{'cDisp':expression}">
             <div class="cloud1" style="align-self: center;"></div>
             <div class="cloud2"></div>
             <div class="cloud1" style="align-self: flex-start;"></div>
         </div>
-        <div class="background"></div>
         <div class="sun" [ngClass]="{'disp':expression}"></div>
         <a class="lang" routerLink="Hindi">हिन्दी</a>
     </div>
 
     <div class="english" (mouseenter)="expression1=true" [ngClass]="{'expand1':expression1, 'shrink':expression}" (mouseleave)="expression1=false">
         <div class="background"></div>
-        <div class='stars' [ngClass]="{'cDisp':expression1}">
-            <div id="midground"></div>
-            <div id="foreground"></div>
+        <div class="stars" [ngClass]="{'cDisp':expression1}">
+            <div id="star"></div>
         </div>
         <div class="moon" [ngClass]="{'disp':expression1}"></div>
         <a class="lang" routerLink="En">English</a>
