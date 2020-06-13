@@ -182,7 +182,7 @@ a {
     transition-duration: 0.2s;
 }
 
-.cDisp {
+.disp {
     opacity: 0.9 !important;
     /* transition: all 0s; */
     transition: opacity ease-in 0.5s;
@@ -191,9 +191,9 @@ a {
 .stars {
     position: absolute;
     display: block;
-    right: 20vw;
+    right: 15%;
     height: 27vh;
-    width: 40vw;
+    width: 20vw;
     top: 0;
     transition-duration: 0.2s;
 }
@@ -202,11 +202,11 @@ a {
     position: absolute;
     opacity: 0;
     top: 30%;
-    left: 10%;
+    right: 10%;
     border-radius: 50%;
-    height: 50px;
+    height: 5px;
+    width: 5px;
     background: white;
-    width: 50px;
     box-shadow: 0px 0px 40px 15px white;
     transition: all ease-in-out 0.3s;
 }
