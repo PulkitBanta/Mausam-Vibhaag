@@ -220,12 +220,10 @@ a {
         flex-direction: column;
     }
     .hindi>a {
-        border: 2px solid rgb(13, 1, 41);
-        color: rgb(13, 1, 41);
+        border: 2px solid rgb(254, 255, 212);
     }
     .english>a {
-        border: 2px solid rgb(254, 255, 212);
-        color: rgb(254, 255, 212);
+        border: 2px solid rgb(13, 1, 41);
     }
     .expand1>a {
         transform: scale(1.3);
