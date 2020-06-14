@@ -48,13 +48,19 @@ $ npm start
 ![Weather in English](screenshots/usa.png "View Weather")
 ![Weather in Hindi](screenshots/hindi.png "View Weather")
 
+## Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on code of conduct, and the process for submitting pull requests.
+
 ## Built With
 
 * [Angular](https://angular.io/) - The web framework used for development of Front end applications.
+* [Open Weather](https://openweathermap.org/) - More weather in your city
 
 ## Contributors
 
-| [![Pulkit Banta](https://github.com/PulkitBanta.png?size=100)](https://github.com/PulkitBanta) | [![Nischey Badyal](https://github.com/NB134.png?size=100)](https://github.com/NB134) |
-| --- | --- |
-| [Pulkit Banta](https://github.com/PulkitBanta) | [Nischey Badyal](https://github.com/NB134) |
+| [![Pulkit Banta](https://github.com/PulkitBanta.png?size=100)](https://github.com/PulkitBanta) | [![Nischey Badyal](https://github.com/NB134.png?size=100)](https://github.com/NB134) | [![Abhishek Kashyap](https://github.com/abhishekashyap.png?size=100)](https://github.com/abhishekashyap) |
+| --- | --- | --- |
+| [Pulkit Banta](https://github.com/PulkitBanta) | [Nischey Badyal](https://github.com/NB134) | [Abhishek Kashyap](https://github.com/Abhishekashyap)
+| <p align="center"><a title="code">💻</a> <a title="designing">🎨</a> <a title="documentation">📖</a></p> | <p align="center"><a title="designing">🎨</a></p> | <p align="center"><a title="documentation">📖</a></p> |
 
