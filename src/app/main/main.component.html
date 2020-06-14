@@ -10,10 +10,16 @@
         <a class="lang" routerLink="Hindi">हिन्दी</a>
     </div>
 
-    <div class="english" (mouseenter)="expression1=true" [ngClass]="{'expand1':expression1, 'shrink':expression}" (mouseleave)="expression1=false">
+    <div class="english" (mouseenter)="expression1=true;" [ngClass]="{'expand1':expression1, 'shrink':expression}" (mouseleave)="expression1=false">
         <div class="background"></div>
-        <div class="stars" [ngClass]="{'disp':expression1}">
-            <div class="star" [ngClass]="{'disp':expression1}"></div>
+        
+        <div id="starContainer" class="stars" >
+            <!-- style fixed jugaad -->
+            <div class="star"  *ngFor="let star of stars" [ngClass]="{'disp':expression1}" [ngStyle]="{'right': star.right, 'top':star.top}">
+            </div>
+            <!-- star function -->
+            <!-- <div class="star" [ngClass]="{'disp':expression1}" *ngFor="let i of [].constructor(10)" [ngStyle]="setMyStyles()" ></div> -->
+            
         </div>
         <div class="moon" [ngClass]="{'disp':expression1}"></div>
         <a class="lang" routerLink="En">English</a>
