@@ -35,7 +35,7 @@ $ npm install
 ```
 
 ### Getting your API key
-Get API key from [OpenWeather](https://openweathermap.org/current) and replace `"Your API KEY"` in the `api.service.ts` with the api_key recieved from [OpenWeather](https://openweathermap.org/current).
+Get API key from [OpenWeather](https://openweathermap.org/current) and replace `"Your API KEY"` in the `api.service.ts` with the api_key received from [OpenWeather](https://openweathermap.org/current).
 
 ```bash
 #Start's development server
@@ -54,7 +54,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on code of conduct, a
 
 ## Built With
 
-* [Angular](https://angular.io/) - The web framework used for development of Front end applications.
+* [Angular](https://angular.io/) - The web framework used for the development of Front end applications.
 * [Open Weather](https://openweathermap.org/) - More weather in your city
 
 ## Contributors
@@ -64,3 +64,6 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on code of conduct, a
 | [Pulkit Banta](https://github.com/PulkitBanta) | [Nischey Badyal](https://github.com/NB134) | [Abhishek Kashyap](https://github.com/Abhishekashyap)
 | <p align="center"><a title="code">💻</a> <a title="designing">🎨</a> <a title="documentation">📖</a></p> | <p align="center"><a title="designing">🎨</a></p> | <p align="center"><a title="documentation">📖</a></p> |
 
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
