@@ -214,6 +214,7 @@ a {
 @media screen and (max-width: 1300px) {
     .hindi, .english {
         width: 100vw;
+        height: 50vh;
         justify-content: center;
     }
     .main {
