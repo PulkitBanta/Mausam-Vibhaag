@@ -1,5 +1,5 @@
-<div class="container full-screen">
-    <div class="align">
+<div class="container full-screen center">
+    <div>
         <form class="input-grid" (ngSubmit)="getDataFromApi(weatherLocation.value)" [formGroup]="weatherLocation">
             <div class="form-group">
                 <input class="form-control" id="location" type="text" placeholder="शहर का नाम" formControlName='location'>
@@ -11,14 +11,14 @@
                 <button type="submit" class="btn btn-success btn-md">मौसम की खोज करें</button>
             </div>
         </form>
-    </div>
 
-    <div class="display">
-        <p class="item1"><img class="image" src="../../assets/location.svg"> &nbsp;{{ this.weatherData?.city.name }}</p>
-        <p class="item2">{{ this.weatherData?.list[0].weather[0].description }}</p>
-        <p class="item3"><img class="image" src="../../assets/temprature.svg"> &nbsp;{{ this.reduce(this.weatherData?.list[0].main.temp - 273.15) }} &#176; C</p>
-        <p><img class="image" src="../../assets/wind.svg"> &nbsp;हवा: {{ this.weatherData?.list[0].wind.speed }} किमी प्रति घंटे</p>
-        <p><img class="image" src="../../assets/precip.svg"> &nbsp;नमी: {{ this.weatherData?.list[0].main.humidity }} %</p>
-        <p><img class="image" src="../../assets/pressure.svg"> &nbsp;दबाव: {{ this.weatherData?.list[0].main.pressure }} मिलीबार</p>
+        <div class="display">
+            <p class="item1"><img class="image" src="../../assets/location.svg"> &nbsp;{{ this.weatherData?.city.name }}</p>
+            <p class="item2">{{ this.weatherData?.list[0].weather[0].description }}</p>
+            <p class="item3"><img class="image" src="../../assets/temprature.svg"> &nbsp;{{ this.reduce(this.weatherData?.list[0].main.temp - 273.15) }} &#176; C</p>
+            <p><img class="image" src="../../assets/wind.svg"> &nbsp;हवा: {{ this.weatherData?.list[0].wind.speed }} किमी प्रति घंटे</p>
+            <p><img class="image" src="../../assets/precip.svg"> &nbsp;नमी: {{ this.weatherData?.list[0].main.humidity }} %</p>
+            <p><img class="image" src="../../assets/pressure.svg"> &nbsp;दबाव: {{ this.weatherData?.list[0].main.pressure }} मिलीबार</p>
+        </div>
     </div>
 </div>
