@@ -16,6 +16,7 @@
     align-items: center;
     justify-content: flex-end;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .english {
@@ -29,6 +30,7 @@
     align-items: center;
     justify-content: flex-start;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .expand1 {
@@ -255,5 +257,11 @@ a {
     }
     a {
         font-size: 5vh;
+    }
+}
+
+@media screen and (max-width: 482px) {
+    .moon, .sun, .stars, .clouds {
+        display: none;
     }
 }
