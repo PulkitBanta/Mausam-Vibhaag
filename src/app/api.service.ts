@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -10,12 +11,12 @@ export class ApiService {
 
   api_key = "Your API KEY"
 
-  getWeather(location, country) {
-    return this.http.get("https://api.openweathermap.org/data/2.5/forecast?q="+ location +"," + country + "&appid=" + this.api_key);
+  getWeather(location, country): Observable<any> {
+    return this.http.get<any>("https://api.openweathermap.org/data/2.5/forecast?q="+ location +"," + country + "&appid=" + this.api_key);
   }
 
-  getHindiWeather(location, country) {
-    return this.http.get("https://api.openweathermap.org/data/2.5/forecast?q="+ location +"," + country + "&appid=" + this.api_key + "&lang=hi");
+  getHindiWeather(location, country): Observable<any> {
+    return this.http.get<any>("https://api.openweathermap.org/data/2.5/forecast?q="+ location +"," + country + "&appid=" + this.api_key + "&lang=hi");
   }
 
 }

@@ -10,7 +10,7 @@ import { ApiService } from '../api.service';
 export class WeatherComponent implements OnInit {
 
   public weatherLocation: FormGroup;
-  weatherData;
+  weatherData$: any;
   intial;
 
   constructor(
@@ -25,7 +25,7 @@ export class WeatherComponent implements OnInit {
     })
 
     // inital location is set to delhi
-    this.apiService.getWeather("Delhi", "IN").subscribe(data => this.weatherData = data)
+    this.apiService.getWeather("Delhi", "IN").subscribe(data => this.weatherData$ = data)
   }
 
   
@@ -34,8 +34,8 @@ export class WeatherComponent implements OnInit {
   }
 
   getDataFromApi(formData) {
-    this.apiService.getWeather(formData.location, formData.country).subscribe(data => this.weatherData = data)
-    console.log(this.weatherData)
+    this.apiService.getWeather(formData.location, formData.country).subscribe(data => this.weatherData$ = data)
+    console.log(this.weatherData$)
   }
 
 }
