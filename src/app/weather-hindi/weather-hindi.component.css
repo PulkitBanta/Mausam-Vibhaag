@@ -57,6 +57,13 @@
     width: 1em;
 }
 
+.back {
+    position: absolute;
+    top: 2%;
+    left: 5%;
+    font-weight: bolder;
+}
+
 @media screen and (max-width: 580px) {
     .display {
         width: auto;
@@ -68,5 +75,9 @@
 
     .align {
         margin-top: 10vh;
+    }
+
+    .back {
+        left: 0%;
     }
 }

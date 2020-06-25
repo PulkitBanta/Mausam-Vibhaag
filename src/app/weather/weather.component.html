@@ -1,5 +1,8 @@
 <div class="container full-screen center">
     <div>
+        <button class="back btn btn-dark" (click)="goBack()"><-- Back</button>
+    </div>
+    <div>
         <form class="input-grid" (ngSubmit)="getDataFromApi(weatherLocation.value)" [formGroup]="weatherLocation">
             <div class="form-group">
                 <input class="form-control" id="location" type="text" placeholder="City Name" formControlName='location'>

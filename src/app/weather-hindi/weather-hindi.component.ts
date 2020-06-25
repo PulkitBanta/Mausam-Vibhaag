@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ApiService } from '../api.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-weather-hindi',
@@ -14,7 +16,8 @@ export class WeatherHindiComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private apiService: ApiService
+    private apiService: ApiService,
+    private location: Location
   ) { }
 
   ngOnInit() {
@@ -24,17 +27,24 @@ export class WeatherHindiComponent implements OnInit {
     })
 
     // inital location is set to delhi to get data from api
-    this.apiService.getHindiWeather("Delhi", "IN")
-      .subscribe(
-        data => this.weatherData$ = data
-      )
+    this.apiService.getHindiWeather("Delhi", "IN").subscribe(data => this.weatherData$ = data)
+
+    // changing the content of back button
+    if(window.outerWidth < 500) {
+      document.querySelector('.back').textContent = '<--'
+      document.querySelector('.back').classList.remove("btn-dark")
+    }
+  }
+  
+  getDataFromApi(formData) {
+    this.apiService.getHindiWeather(formData.location, formData.country).subscribe(data => this.weatherData$ = data)
   }
 
   reduce(number) {
     return number.toFixed(1);
   }
 
-  getDataFromApi(formData) {
-    this.apiService.getHindiWeather(formData.location, formData.country).subscribe(data => this.weatherData$ = data)
+  goBack(): void {
+    this.location.back();
   }
 }
