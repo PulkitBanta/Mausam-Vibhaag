@@ -44,9 +44,10 @@ $ npm start
 
 ## Screenshots
 
-![Homepage](screenshots/landing-page.png "Landing page")
-![Weather in English](screenshots/usa.png "View Weather")
-![Weather in Hindi](screenshots/hindi.png "View Weather")
+![Landing Page](screenshots/landing_page.png "Landing page")
+![Landing Page](screenshots/landing_page_en.png "Landing page")
+![Weather in English](screenshots/en_weather.png "Weather in English")
+![Weather in Hindi](screenshots/hindi_weather.png "Weather in Hindi")
 
 ## Contributing
 
@@ -55,7 +56,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on code of conduct, a
 ## Built With
 
 * [Angular](https://angular.io/) - The web framework used for the development of Front end applications.
-* [Open Weather](https://openweathermap.org/) - More weather in your city
+* [OpenWeather](https://openweathermap.org/) - More weather in your city
 
 ## Contributors
 
