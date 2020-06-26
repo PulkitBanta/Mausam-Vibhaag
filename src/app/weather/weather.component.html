@@ -1,6 +1,6 @@
 <div class="container full-screen center">
-    <div>
-        <button class="back btn btn-dark" (click)="goBack()"><-- Back</button>
+    <div class="back">
+        <img src="../../assets/back_arrow.svg" (click)="goBack()">
     </div>
     <div>
         <form class="input-grid" (ngSubmit)="getDataFromApi(weatherLocation.value)" [formGroup]="weatherLocation">

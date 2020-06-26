@@ -28,19 +28,13 @@ export class WeatherComponent implements OnInit {
 
     // inital location is set to delhi
     this.apiService.getWeather("Delhi", "IN").subscribe(data => this.weatherData$ = data)
-
-    // changing the content of back button
-    if(window.outerWidth < 500) {
-      document.querySelector('.back').textContent = '<--'
-      document.querySelector('.back').classList.remove("btn-dark")
-    }
   }
 
-  reduce(number) {
+  reduce(number): void {
     return number.toFixed(1);
   }
 
-  getDataFromApi(formData) {
+  getDataFromApi(formData): void {
     this.apiService.getWeather(formData.location, formData.country).subscribe(data => this.weatherData$ = data)
     console.log(this.weatherData$)
   }

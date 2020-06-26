@@ -28,14 +28,13 @@ export class WeatherHindiComponent implements OnInit {
 
     // inital location is set to delhi to get data from api
     this.apiService.getHindiWeather("Delhi", "IN").subscribe(data => this.weatherData$ = data)
-
   }
   
-  getDataFromApi(formData) {
+  getDataFromApi(formData): void {
     this.apiService.getHindiWeather(formData.location, formData.country).subscribe(data => this.weatherData$ = data)
   }
 
-  reduce(number) {
+  reduce(number): void {
     return number.toFixed(1);
   }
 
