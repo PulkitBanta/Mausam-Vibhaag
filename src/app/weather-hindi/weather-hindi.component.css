@@ -61,7 +61,8 @@
     position: absolute;
     top: 2%;
     left: 5%;
-    font-weight: bolder;
+    cursor: pointer;
+    color: white;
 }
 
 @media screen and (max-width: 580px) {
@@ -78,6 +79,6 @@
     }
 
     .back {
-        left: 0%;
+        left: 2%;
     }
 }

@@ -29,11 +29,6 @@ export class WeatherHindiComponent implements OnInit {
     // inital location is set to delhi to get data from api
     this.apiService.getHindiWeather("Delhi", "IN").subscribe(data => this.weatherData$ = data)
 
-    // changing the content of back button
-    if(window.outerWidth < 500) {
-      document.querySelector('.back').textContent = '<--'
-      document.querySelector('.back').classList.remove("btn-dark")
-    }
   }
   
   getDataFromApi(formData) {
