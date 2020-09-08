@@ -11,7 +11,7 @@ import { Location } from '@angular/common';
 })
 export class WeatherComponent implements OnInit {
 
-  public weatherLocation: FormGroup;
+  weatherLocation: FormGroup;
   weatherData$: any;
 
   constructor(

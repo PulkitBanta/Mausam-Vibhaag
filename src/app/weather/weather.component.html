@@ -16,12 +16,12 @@
         </form>
 
         <div class="display">
-            <p class="item1"><img class="image" src="../../assets/location.svg"> &nbsp;{{ this.weatherData$?.city.name }}</p>
-            <p class="item2">{{ this.weatherData$?.list[0].weather[0].description }}</p>
-            <p class="item3"><img class="image" src="../../assets/temprature.svg"> &nbsp;{{ this.reduce(this.weatherData$?.list[0].main.temp - 273.15) }} &#176; C</p>
-            <p><img class="image" src="../../assets/wind.svg"> &nbsp;Wind: {{ this.weatherData$?.list[0].wind.speed }} kmph</p>
-            <p><img class="image" src="../../assets/precip.svg"> &nbsp;Humidity: {{ this.weatherData$?.list[0].main.humidity }} %</p>
-            <p><img class="image" src="../../assets/pressure.svg"> &nbsp;Pressure: {{ this.weatherData$?.list[0].main.pressure }} mb</p>
+            <p class="item1"><img class="image" src="../../assets/location.svg"> {{ weatherData$?.city.name }}</p>
+            <p class="item2">{{ weatherData$?.list[0].weather[0].description }}</p>
+            <p class="item3"><img class="image" src="../../assets/temprature.svg"> {{ reduce(weatherData$?.list[0].main.temp - 273.15) }} &#176; C</p>
+            <p><img class="image" src="../../assets/wind.svg"> Wind: {{ weatherData$?.list[0].wind.speed }} kmph</p>
+            <p><img class="image" src="../../assets/precip.svg"> Humidity: {{ weatherData$?.list[0].main.humidity }} %</p>
+            <p><img class="image" src="../../assets/pressure.svg"> Pressure: {{ weatherData$?.list[0].main.pressure }} mb</p>
         </div>
     </div>
 </div>
